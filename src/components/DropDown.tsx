@@ -15,19 +15,6 @@ type DropDownProps = {
   participants: string;
   type: string;
 };
-const style = {
-  textTransform: "capitalize",
-  fontSize: 16,
-  marginTop: -8,
-  marginBottom: -8,
-  backgroundColor: "#222222",
-};
-
-const styleT = {
-  textTransform: "capitalize",
-  fontSize: 16,
-  margin: 0,
-};
 
 export const DropDown = ({
   handleChange,
@@ -42,8 +29,22 @@ export const DropDown = ({
         <InputLabel style={{ color: "white" }}>Type</InputLabel>
         <Select color="success" value={type} onChange={handleChange}>
           {data.map((d) => (
-            <MenuItem key={d} value={d} style={style}>
-              <p style={styleT}>{d}</p>
+            <MenuItem
+              key={d}
+              value={d}
+              style={{
+                textTransform: "capitalize",
+                fontSize: 16,
+                marginTop: -8,
+                marginBottom: -8,
+                backgroundColor: "#222222",
+              }}
+            >
+              <p
+                style={{ textTransform: "capitalize", fontSize: 16, margin: 0 }}
+              >
+                {d}
+              </p>
             </MenuItem>
           ))}
         </Select>
@@ -55,12 +56,48 @@ export const DropDown = ({
           value={participants}
           onChange={handleChangePart}
         >
-          <MenuItem style={style} key={1} value={1}>
-            <p style={styleT}>1</p>
+          <MenuItem
+            style={{
+              textTransform: "capitalize",
+              fontSize: 16,
+              marginTop: -8,
+              marginBottom: -8,
+              backgroundColor: "#222222",
+            }}
+            key={1}
+            value={1}
+          >
+            <p
+              style={{
+                textTransform: "capitalize",
+                fontSize: 16,
+                margin: 0,
+              }}
+            >
+              1
+            </p>
           </MenuItem>
           {(type === "cooking" || type === "social") && (
-            <MenuItem style={style} key={2} value={2}>
-              <p style={styleT}>2</p>
+            <MenuItem
+              style={{
+                textTransform: "capitalize",
+                fontSize: 16,
+                marginTop: -8,
+                marginBottom: -8,
+                backgroundColor: "#222222",
+              }}
+              key={2}
+              value={2}
+            >
+              <p
+                style={{
+                  textTransform: "capitalize",
+                  fontSize: 16,
+                  margin: 0,
+                }}
+              >
+                2
+              </p>
             </MenuItem>
           )}
         </Select>
