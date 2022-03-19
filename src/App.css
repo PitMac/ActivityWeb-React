@@ -1,23 +1,44 @@
 .App {
   text-align: center;
   height: 100vh;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #222222;
 }
 
 h1 {
   font-size: 72px;
-  background: -webkit-linear-gradient(rgb(242, 255, 55), #333);
+  background: -webkit-linear-gradient(rgb(242, 255, 55), rgb(136, 136, 136));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+p {
+  font-size: 20px;
+  color: white;
+}
+
+span {
+  font-weight: bold;
+}
+
+a {
+  font-weight: bold;
+  color: rgb(119, 126, 23);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+.activityName {
+  font-size: 3rem;
+}
+
+@media (max-width: 1000px) {
+  .activityName {
+    font-size: 2.1rem;
+  }
 }

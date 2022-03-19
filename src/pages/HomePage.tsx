@@ -27,13 +27,27 @@ export default function HomePage() {
   ];
 
   const style = {
-    color: "white",
-    backgroundColor: "black",
+    color: "black",
+    backgroundColor: "white",
   };
 
   return (
-    <Container style={{ paddingTop: 20 }}>
+    <Container
+      style={{
+        paddingTop: 20,
+        display: "flex",
+        height: "100%",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        justifyItems: "center",
+      }}
+    >
       <h1>Search a activity!</h1>
+      <p>
+        Are you bored? <span>NO PROBLEM</span> with this page you can find any
+        activity 🥵
+      </p>
       <DropDown
         handleChange={handleChangeType}
         participants={participants}
@@ -45,6 +59,17 @@ export default function HomePage() {
       <Button sx={style} onClick={handleOpen}>
         Search
       </Button>
+      <p>
+        This page is built with{" "}
+        <a target="_blank" href="https://www.boredapi.com/">
+          BoredAPI
+        </a>
+      </p>
+      <p>
+        <a target="_blank" href="https://jhonpitmac.vercel.app/">
+          Jhon PitMac
+        </a>
+      </p>
       {activity && (
         <Modal
           handleClose={handleClose}
